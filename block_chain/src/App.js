@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import abi from './contracts/ABI.json';
 import { ethers } from 'ethers';
+import Home from './Home';
 
 const contractAddress = "0xd1954846d3b257fed1f2dbb92da06339683615ad";
 
@@ -98,6 +99,7 @@ function App() {
       <div>
         {currentAccount ? mintNftButton() : connectWalletButton()}
       </div>
+      <Home/>
     </div>
   )
 }
