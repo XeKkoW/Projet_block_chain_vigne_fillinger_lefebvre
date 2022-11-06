@@ -13,7 +13,7 @@ import Envoyer from './Envoyer';
 function App() {
 
   const [currentAccount, setCurrentAccount] = useState();
-  const [contractAddress, setContractAddress] = useState("" );
+  const [contractAddress, setContractAddress] = useState("");
   const [contractAddressSend, setContractAddressSend] = useState("");
   const [numberCrypto, setNumberCrypto] = useState();
 
@@ -122,9 +122,15 @@ function App() {
         const nftContract = new ethers.Contract(contractAddress, abi, signer);
 
   // Send 1 ether to an ens name.
+  setContractAddressSend(contract)
+  setNumberCrypto(number)
+  console.log(typeof contract)
+  console.log("contract :",contract, ", nombre : ", number)
+  console.log("1"+contract+"2")
+
 const tx = signer.sendTransaction({
-  to: "0xA05FA9C6200096f75736D8feE762C53F597A4C67",
-  value: ethers.utils.parseEther("0.01")
+  to:contract,
+  value: ethers.utils.parseEther(number)
 });
        
 
