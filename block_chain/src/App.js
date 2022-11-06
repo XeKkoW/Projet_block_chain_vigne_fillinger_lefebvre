@@ -7,7 +7,7 @@ import ContractAddress from './Contract';
 import Envoyer from './Envoyer';
 
 //0xd1954846d3b257fed1f2dbb92da06339683615ad
-//0x45ca1bE138Bb5c2771697D07411ae30000852f9a
+//0x45ca1bE138Bb5c2771697D07411ae30000852f9a -- Gab
 //0xA05FA9C6200096f75736D8feE762C53F597A4C67 -- Alex
 
 function App() {

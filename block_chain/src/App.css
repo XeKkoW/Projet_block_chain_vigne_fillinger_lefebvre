@@ -32,7 +32,7 @@
 body {
   background: no-repeat url("../../block_chain/public/stonks-meme.jpg");
   background-size: cover;
-  background-position: fixed;
+  background-attachment: fixed;
 
   font: bold 1.2em "Fira Sans", sans-serif;
   color: rgb(63, 63, 63);
