@@ -122,7 +122,9 @@ function App() {
   return (
     <div className='background-app'>
       <div className='main-app'>
-        <h1>TP ECE</h1>
+        <h1>TRADE TA CRYPTO</h1>
+        <h2>Projet Block-Chain ECE</h2>
+        <h3>ft. Vigne | Fillinger | Lefebvre</h3>
         <ContractAddress newContract = {NewContract}/>
         <Envoyer send = {Send}/>
         
