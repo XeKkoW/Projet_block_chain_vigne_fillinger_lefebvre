@@ -39,14 +39,16 @@ class Envoyer extends React.Component {
       return (
         <form onSubmit={this.handleSubmit}>
           <label>
-            Contract de la personne à qui vous voulez l'envoyer
+            Adresse du destinataire :
             <input name="value" type="text" value={this.state.value} onChange={this.handleChange} />
           </label>
+          <br></br>
           <label>
-            nombre d'ether
+            Montant recu par le destinataire :
             <input name="value2" type="number" value={this.state.value2} onChange={this.handleChange} />
           </label>
-          <input type="submit" value="Envoyer" />
+          <br></br>
+          <input type="submit" value="Envoyer" className='formButton'/>
         </form>
       );
     }

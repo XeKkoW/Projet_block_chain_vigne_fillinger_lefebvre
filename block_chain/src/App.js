@@ -120,13 +120,15 @@ function App() {
     }
 
   return (
-    <div className='main-app'>
-      <h1>TP ECE</h1>
-      <ContractAddress newContract = {NewContract}/>
-      <Envoyer send = {Send}/>
-      
-      <div>
-        {currentAccount ? mintNftButton() : connectWalletButton()}
+    <div className='background-app'>
+      <div className='main-app'>
+        <h1>TP ECE</h1>
+        <ContractAddress newContract = {NewContract}/>
+        <Envoyer send = {Send}/>
+        
+        <div>
+          {currentAccount ? mintNftButton() : connectWalletButton()}
+        </div>
       </div>
     </div>
   )
