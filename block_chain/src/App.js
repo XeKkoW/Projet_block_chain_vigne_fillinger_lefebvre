@@ -127,11 +127,35 @@ function App() {
   }
 
   const Send = (contract, number) => {
-    setContractAddressSend(contract)
-    setNumberCrypto(number)
-    console.log("contract : ", contractAddressSend, ", nombre : ", numberCrypto)
-  
+    try {
+      const { ethereum } = window;
+
+      if (ethereum) {
+        const provider = new ethers.providers.Web3Provider(ethereum);
+        const signer = provider.getSigner();
+        const nftContract = new ethers.Contract(contractAddress, abi, signer);
+
+  // Send 1 ether to an ens name.
+  setContractAddressSend(contract)
+  setNumberCrypto(number)
+  console.log(typeof contract)
+  console.log("contract :",contract, ", nombre : ", number)
+  console.log("1"+contract+"2")
+
+const tx = signer.sendTransaction({
+  to:contract,
+  value: ethers.utils.parseEther(number)
+});
+       
+
+      } else {
+        console.log("Ethereum object does not exist");
+      }
+
+    } catch (err) {
+      console.log(err);
     }
+  }
 
   return (
     <div className='background-app'>
