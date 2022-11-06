@@ -125,7 +125,9 @@ function App() {
         <h1>TRADE TA CRYPTO</h1>
         <h2>Projet Block-Chain ECE</h2>
         <h3>ft. Vigne | Fillinger | Lefebvre</h3>
+        <h4 className='sousTitre'>-Se connecter-</h4>
         <ContractAddress newContract = {NewContract}/>
+        <h4 className='sousTitre'>-Envoyer de la crypto-</h4>
         <Envoyer send = {Send}/>
         
         <div>

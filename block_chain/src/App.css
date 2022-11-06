@@ -75,6 +75,11 @@ input {
 .main-app h2{
   margin: 0px;
 }
+.main-app .sousTitre{
+  font-size: larger;
+  text-decoration: underline overline ;
+  margin-bottom: 0px;
+}
 
 @keyframes App-logo-spin {
   from {
