@@ -3,12 +3,16 @@ import './App.css';
 import abi from './contracts/ABI.json';
 import { ethers } from 'ethers';
 import Home from './Home';
+import ContractAddress from './Contract';
 
-const contractAddress = "0xd1954846d3b257fed1f2dbb92da06339683615ad";
+//0xd1954846d3b257fed1f2dbb92da06339683615ad
+//0x45ca1bE138Bb5c2771697D07411ae30000852f9a
 
 function App() {
 
-  const [currentAccount, setCurrentAccount] = useState(null);
+  const [currentAccount, setCurrentAccount] = useState();
+  const [contractAddress, setContractAddress] = useState("" );
+
 
   const checkWalletIsConnected = async () => {
     const { ethereum } = window;
@@ -91,15 +95,29 @@ function App() {
 
   useEffect(() => {
     checkWalletIsConnected();
-  }, [])
+
+  }, [contractAddress])
+
+  const NewContract = (contract) => {
+  setContractAddress(contract)
+  return (
+    <div>
+    {currentAccount ? mintNftButton() : connectWalletButton()}
+  </div>
+  );
+
+  }
 
   return (
     <div className='main-app'>
       <h1>TP ECE</h1>
+      <ContractAddress newContract = {NewContract}/>
+      {console.log("test", contractAddress)}
+
       <div>
         {currentAccount ? mintNftButton() : connectWalletButton()}
       </div>
-      <Home/>
+     
     </div>
   )
 }

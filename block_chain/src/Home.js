@@ -5,7 +5,6 @@ const Home = () => {
         <div>
             <h1>Achat</h1>
             <div>
-            <img src="squirrels.gif" alt="" />
             </div>
             
         </div>
@@ -13,3 +12,4 @@ const Home = () => {
 };
 
 export default Home;
+//            <img src="squirrels.gif" alt="" />
