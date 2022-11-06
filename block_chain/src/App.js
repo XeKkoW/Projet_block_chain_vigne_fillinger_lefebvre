@@ -4,6 +4,7 @@ import abi from './contracts/ABI.json';
 import { ethers } from 'ethers';
 import Home from './Home';
 import ContractAddress from './Contract';
+import Envoyer from './Envoyer';
 
 //0xd1954846d3b257fed1f2dbb92da06339683615ad
 //0x45ca1bE138Bb5c2771697D07411ae30000852f9a
@@ -12,6 +13,8 @@ function App() {
 
   const [currentAccount, setCurrentAccount] = useState();
   const [contractAddress, setContractAddress] = useState("" );
+  const [contractAddressSend, setContractAddressSend] = useState("");
+  const [numberCrypto, setNumberCrypto] = useState();
 
 
   const checkWalletIsConnected = async () => {
@@ -108,12 +111,19 @@ function App() {
 
   }
 
+  const Send = (contract, number) => {
+    setContractAddressSend(contract)
+    setNumberCrypto(number)
+    console.log("contract : ", contractAddressSend, ", nombre : ", numberCrypto)
+  
+    }
+
   return (
     <div className='main-app'>
       <h1>TP ECE</h1>
       <ContractAddress newContract = {NewContract}/>
-      {console.log("test", contractAddress)}
-
+      <Envoyer send = {Send}/>
+      
       <div>
         {currentAccount ? mintNftButton() : connectWalletButton()}
       </div>
