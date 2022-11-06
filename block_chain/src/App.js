@@ -120,18 +120,6 @@ function App() {
     }
 
   return (
-<<<<<<< HEAD
-    <div className='background-app'>
-      <div className='main-app'>
-        <h1>TP ECE</h1>
-        <ContractAddress newContract = {NewContract}/>
-        {console.log("test", contractAddress)}
-
-        <div>
-          {currentAccount ? mintNftButton() : connectWalletButton()}
-        </div>
-      
-=======
     <div className='main-app'>
       <h1>TP ECE</h1>
       <ContractAddress newContract = {NewContract}/>
@@ -139,7 +127,6 @@ function App() {
       
       <div>
         {currentAccount ? mintNftButton() : connectWalletButton()}
->>>>>>> test-gab
       </div>
     </div>
   )
