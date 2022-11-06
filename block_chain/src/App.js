@@ -12,7 +12,7 @@ import ContractAddress from './Contract';
 function App() {
 
   const [currentAccount, setCurrentAccount] = useState();
-  const [contractAddress, setContractAddress] = useState("" );
+  const [contractAddress, setContractAddress] = useState("");
 
 
   const checkWalletIsConnected = async () => {
@@ -88,7 +88,7 @@ function App() {
 
   const mintNftButton = () => {
     return (
-      <button onClick={mintNftHandler} className='cta-button mint-nft-button'>
+      <button onClick={mintNftHandler} className='cta-button mint-nft-button formButton'>
         Mint NFT
       </button>
     )
