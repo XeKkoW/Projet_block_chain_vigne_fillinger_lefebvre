@@ -170,15 +170,16 @@ const tx = signer.sendTransaction({
         <h4 className='sousTitre'>-Envoyer de la crypto-</h4>
         <Envoyer send = {Send}/>
 
+        <h4 className='sousTitre'>-Balance du compte connecté-</h4>
         {!contractAddress ? "" :         
-<div>
-       <ul>
-          <li>Account</li>
-          <li>{contractAddress}</li>
-          <li>Balance</li>
-          <li>{balance}</li>
-        </ul>
-          </div>
+        <div>
+        <ul>
+            <li>Account</li>
+            <li>{contractAddress}</li>
+            <li>Balance</li>
+            <li>{balance}</li>
+          </ul>
+        </div>
         }
 
         <h4 className='sousTitre'>-Tester un envoie vers son propre compte-</h4>
