@@ -27,10 +27,12 @@ class ContractAddress extends React.Component {
       return (
         <form onSubmit={this.handleSubmit}>
           <label>
-            Nom :
+            Numéro d'adresse de contrat :  
             <input type="text" value={this.state.value} onChange={this.handleChange} />
           </label>
-          <input type="submit" value="Envoyer" />
+          <br></br>
+          <input type="submit" value="Appliquer" />
+          <br></br>
         </form>
       );
     }
