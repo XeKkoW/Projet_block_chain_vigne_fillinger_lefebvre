@@ -91,9 +91,11 @@ function App() {
 
   const mintNftButton = () => {
     return (
-      <button onClick={mintNftHandler} className='cta-button mint-nft-button formButton'>
-        Mint NFT
-      </button>
+      <form>
+        <button onClick={mintNftHandler} className='cta-button mint-nft-button formButton'>
+          Mint NFT
+        </button>
+      </form>
     )
   }
 
@@ -125,14 +127,15 @@ function App() {
         <h1>TRADE TA CRYPTO</h1>
         <h2>Projet Block-Chain ECE</h2>
         <h3>ft. Vigne | Fillinger | Lefebvre</h3>
+        
         <h4 className='sousTitre'>-Se connecter-</h4>
         <ContractAddress newContract = {NewContract}/>
+
         <h4 className='sousTitre'>-Envoyer de la crypto-</h4>
         <Envoyer send = {Send}/>
-        
-        <div>
-          {currentAccount ? mintNftButton() : connectWalletButton()}
-        </div>
+
+        <h4 className='sousTitre'>-Tester un envoie vers son propre compte-</h4>
+        {currentAccount ? mintNftButton() : connectWalletButton()}
       </div>
     </div>
   )
