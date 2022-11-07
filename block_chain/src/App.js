@@ -105,7 +105,7 @@ function App() {
     return (
       <form>
         <button onClick={mintNftHandler} className='cta-button mint-nft-button formButton'>
-          Mint NFT
+          Mint
         </button>
       </form>
     )
@@ -182,7 +182,7 @@ const tx = signer.sendTransaction({
         </div>
         }
 
-        <h4 className='sousTitre'>-Tester un envoie vers son propre compte-</h4>
+        <h4 className='sousTitre'>-Tester un envoi vers son propre compte-</h4>
         {currentAccount ? mintNftButton() : connectWalletButton()}
         {console.log("test", contractAddress)}
         

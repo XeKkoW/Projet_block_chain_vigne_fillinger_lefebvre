@@ -44,7 +44,7 @@ class Envoyer extends React.Component {
           </label>
           <br></br>
           <label>
-            Montant recu par le destinataire :
+            Montant reçu par le destinataire :
             <input name="value2" type="number" value={this.state.value2} onChange={this.handleChange} />
           </label>
           <br></br>
