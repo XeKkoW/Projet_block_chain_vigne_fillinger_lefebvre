@@ -1,3 +1,5 @@
+Projet de Gabriel Vigne, Alexandre Fillinger, Virgile Lefebvre 
+
 Bonjour et bienvenue sur notre projet dédié à la Blockchain.
 
 Sur cette page WEB, différentes fonctions vous serons accessibles :
